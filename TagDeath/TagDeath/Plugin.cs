@@ -15,8 +15,8 @@ namespace TagDeath
 
         private void OnLocalTag(object sender, BananaHook.PlayerTaggedPlayerArgs e)
         {
-            // haha L
-            if (e.victim.IsLocal) Application.Quit();
+            // Whoops forgot to check if the mod was enabled
+            if (e.victim.IsLocal && enabled) Application.Quit();
         }
     }
 }
