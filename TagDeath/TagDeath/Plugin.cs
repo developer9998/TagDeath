@@ -7,6 +7,7 @@ namespace TagDeath
     [BepInPlugin("com.dev9998.gorillatag.tagdeath", "TagDeath", "1.0.0")]
     public class Plugin : BaseUnityPlugin
     {
+        // This part calls the OnLocalTag method it's not anything special
         public void Start() => BananaHook.Events.OnLocalPlayerTag += OnLocalTag;
 
         public void OnEnable() => GorillaTagger.Instance?.offlineVRRig?.tagSound.PlayOneShot(GorillaTagger.Instance.offlineVRRig.clipToPlay[2], 0.2f);
